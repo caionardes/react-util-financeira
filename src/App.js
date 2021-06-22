@@ -8,8 +8,10 @@ function App() {
 
   return (
     <div className="container">
-      <Header onClick={onClick} title="React + Google Cloud"/>
-      <br/><br/><br/><br/>
+      <Header onClick={onClick} title="React + CGP"/>
+      <br/><br/><br/>
+      <p>Cloud Build + Cloud Run</p>
+      <br/>
       <p>Por: Caio Nardes.</p>
     </div>
   );
