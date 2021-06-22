@@ -1,0 +1,5 @@
+# Build otimizado para producao
+npm run build or npx react-scripts build
+
+# Empacotar tudo em um arquivo so
+npx gulp

@@ -6,7 +6,7 @@ const Header = ({ title, onClick }) => {
     return (
         <header className='header'>
             <h1 style={headerStyles} >{title}</h1>
-            <Button text='Add' onClick={onClick}/>
+            <Button text='Olá' onClick={onClick}/>
         </header>
     )
 }
