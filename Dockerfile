@@ -1,20 +1,20 @@
-# pull official base image
+# Imagem baseada em Node
 FROM node:12.20.1-alpine
 
-# set working directory
+# Cria o diretorio do app
+RUN mkdir /app
+
+# Copia todo conteudo do app
+COPY . /app
+
+# Navega no servidor ate a pasta do app
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
+# Cria variavel $PATH apontando para `/app/node_modules/.bin`
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@4.0.3 -g --silent
-
-# add app
-COPY . ./
+RUN yarn
 
 # start app
 CMD ["npm", "start"]
